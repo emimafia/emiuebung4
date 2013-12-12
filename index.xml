@@ -42,8 +42,8 @@
   <use xlink:href="#ornament" x="650" y="1350" style ="fill:red" onclick="changeColor(this)"/>
   <use xlink:href="#ornament" x="1250" y="1400" style="fill:red" onclick="changeColor(this)" />
   <use xlink:href="#ornament" x="1000" y="450" style="fill:red" onclick="changeColor(this)"/>
-  <use xlink:href="#star" transform="translate(905,60)" id="star1" onmouseover="turnaround(this)" onmouseout="stopturn(this)" />
-  <use xlink:href="#star" transform="scale(0.5),translate(1505,2000)" id="star2" onmouseover="turnaround(this)" onmouseout="stopturn(this)"/>
-  <use xlink:href="#star" transform="scale(0.5),translate(2005, 1500)" id="star3" onmouseover="turnaround(this)" onmouseout="stopturn(this)"/>
-  <use xlink:href="#star" transform="scale(0.5),translate(2005,2500)" id="star3" onmouseover="turnaround(this)" onmouseout="stopturn(this)"/>
+  <use xlink:href="#star" transform="translate(905,60)" onmouseover="turnaround(this)" onmouseout="stopturn(this)" />
+  <use xlink:href="#star" transform="scale(0.5),translate(1505,2000)" onmouseover="turnaround(this)" onmouseout="stopturn(this)"/>
+  <use xlink:href="#star" transform="scale(0.5),translate(2005, 1500)" onmouseover="turnaround(this)" onmouseout="stopturn(this)"/>
+  <use xlink:href="#star" transform="scale(0.5),translate(2005,2500)" onmouseover="turnaround(this)" onmouseout="stopturn(this)"/>
 </svg>
