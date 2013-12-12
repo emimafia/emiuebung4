@@ -1,5 +1,5 @@
-<?xml version="1.0"?>
-<!DOCTYPE svg>
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="25cm" height="25cm" viewBox="0 0 2500 2500">
 	<defs>
   	<symbol id="tree">
@@ -9,11 +9,11 @@
     	<circle r="50" cx="50" cy="50" />
     </symbol>
     <symbol id="star">
-    	<polygon fill="gold" stroke="0" stroke-width="2" points="100 0 42 180 195 70 5 70 158 180" />
+    	<polygon fill="gold" stroke="0" stroke-width="2" points="95,0 37,180 190,70 0,70 153,180" />
     </symbol>
     <symbol id="rotatingstar">
-    	<polygon fill="gold" stroke="0" stroke-width="2" points="100 0 42 180 195 70 5 70 158 180" >
-      	<animateTransform attributeName="transform" attributeType="XML" type="rotate" from="0 100 100" to="360 100 100" dur="10s" repeatCount="1"/>
+    	<polygon fill="gold" stroke="0" stroke-width="2" points="95,0 37,180 190,70 0,70 153,180" >
+      	<animateTransform attributeName="transform" attributeType="XML" type="rotate" from="0 95 100" to="360 95 100" dur="10s" repeatCount="indefinite"/>
       </polygon>
     </symbol>
 	  <script>
@@ -29,6 +29,9 @@
 	      function turnaround(star){
 					star.setAttribute("xlink:href","#rotatingstar");
 				}
+        function stopturn(star){
+          star.setAttribute("xlink:href","#star");
+        }
 	    ]]>
 	  </script>
   </defs>
@@ -39,9 +42,8 @@
   <use xlink:href="#ornament" x="650" y="1350" style ="fill:red" onclick="changeColor(this)"/>
   <use xlink:href="#ornament" x="1250" y="1400" style="fill:red" onclick="changeColor(this)" />
   <use xlink:href="#ornament" x="1000" y="450" style="fill:red" onclick="changeColor(this)"/>
-  <use xlink:href="#star" transform="translate(900,60)" onmouseover="turnaround(this)" />
-  <use xlink:href="#star" transform="scale(0.5),translate(1500,2000)" onmouseover="turnaround(this)" />
-  <use xlink:href="#star" transform="scale(0.5),translate(2000, 1500)" onmouseover="turnaround(this)" />
-  <use xlink:href="#star" transform="scale(0.5),translate(2000,2500)" onmouseover="turnaround(this)" />
-  <!-- onmouseout="turnaround(this)" -->
+  <use xlink:href="#star" transform="translate(905,60)" id="star1" onmouseover="turnaround(this)" onmouseout="stopturn(this)" />
+  <use xlink:href="#star" transform="scale(0.5),translate(1505,2000)" id="star2" onmouseover="turnaround(this)" onmouseout="stopturn(this)"/>
+  <use xlink:href="#star" transform="scale(0.5),translate(2005, 1500)" id="star3" onmouseover="turnaround(this)" onmouseout="stopturn(this)"/>
+  <use xlink:href="#star" transform="scale(0.5),translate(2005,2500)" id="star3" onmouseover="turnaround(this)" onmouseout="stopturn(this)"/>
 </svg>
